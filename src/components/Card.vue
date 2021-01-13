@@ -32,7 +32,7 @@
         </div>
     </div>
     <div v-show="isQiTa">
-        <today-weather></today-weather>
+        <qi-ta-weather-card></qi-ta-weather-card>
     </div>
 </div>
 </template>
@@ -41,10 +41,11 @@
 import moment from 'moment'
 import TodayWeather from "./TodayWeather.vue";
 import QiTianWeather from "./QiTianWeatherCard.vue";
+import QiTaWeatherCard from "./QiTaWeatherCard.vue";
 
 export default {
     name: "Card",
-    components: {QiTianWeather, TodayWeather},
+    components: {QiTaWeatherCard, QiTianWeather, TodayWeather},
     data() {
         return {
             title: 'test',
