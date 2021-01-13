@@ -24,21 +24,41 @@
     <div v-show="isJinTian">
         <today-weather></today-weather>
     </div>
+    <div v-show="isQiTian">
+        <div class="item-inline">
+            <template v-for="(item,index) in qiTianData" :key="index">
+                <qi-tian-weather></qi-tian-weather>
+            </template>
+        </div>
+    </div>
+    <div v-show="isQiTa">
+        <today-weather></today-weather>
+    </div>
 </div>
 </template>
 
 <script>
 import moment from 'moment'
 import TodayWeather from "./TodayWeather.vue";
+import QiTianWeather from "./QiTianWeatherCard.vue";
 
 export default {
     name: "Card",
-    components: {TodayWeather},
+    components: {QiTianWeather, TodayWeather},
     data() {
         return {
             title: 'test',
             updateTime: '',
-            activeName: 'jinTian'
+            activeName: 'jinTian',
+            qiTianData: [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+            ]
         }
     },
     computed:{
@@ -106,4 +126,8 @@ export default {
         }
     }
 }
+    .item-inline{
+        display: flex;
+        justify-content: flex-start;
+    }
 </style>
