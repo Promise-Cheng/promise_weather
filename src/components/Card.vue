@@ -73,6 +73,7 @@ export default {
 <style lang="scss" scoped>
 .card {
     padding: 10px;
+    height: calc(100vh - 45px);
     background: #ffffff;
 
     &-top {
@@ -90,6 +91,7 @@ export default {
         justify-content: flex-start;
         flex-direction: row;
         margin-top: 20px;
+        height: 32px;
         &-item {
             background: #d0ebff;
             margin-left: 15px;
